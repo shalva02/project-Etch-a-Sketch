@@ -14,26 +14,27 @@
       body {
         display: flex;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      button {
+        padding: 10px 20px;
       }
       #container {
-        width: 650px;
-        height: 650px;
-        border: 1px solid;
+        width: 600px;
+        height: 600px;
+        outline: 2px solid;
         display: flex;
         flex-wrap: wrap;
       }
       .grid-items {
         flex: 0 0 calc(100% / var(--columns, 1));
         aspect-ratio: 1 / 1;
-        border: 2px solid green;
-        /* transition: 1s cubic-bezier(0,1.84,0,-0.47); */
       }
-      /* .grid-items:hover {
-        background: red;
-      } */
     </style>
   </head>
   <body>
+    <button>grid size</button>
     <div id="container"></div>
   </body>
 </html>
