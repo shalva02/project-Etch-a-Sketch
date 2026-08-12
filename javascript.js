@@ -2,7 +2,15 @@ const container = document.getElementById("container");
 const button = document.querySelector("button");
 container.addEventListener("mouseover", (event) => {
   let target = event.target;
-  target.style.background = "#ff00009e";
+  const randomColor = () => Math.floor(Math.random() * 256);
+  if (!target.style.background) {
+    target.style.background = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+    target.style.opacity = "1.0";
+  } else {
+    const currentOpacity = parseFloat(target.style.opacity) || 0;
+    const next = +(currentOpacity - 0.1).toFixed(1);
+    target.style.opacity = String(next);
+  }
 });
 button.addEventListener("click", (event) => {
   let userInput = prompt("enter grid size. max: 100");
