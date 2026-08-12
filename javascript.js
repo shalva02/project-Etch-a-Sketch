@@ -2,7 +2,7 @@ const container = document.getElementById("container");
 const button = document.querySelector("button");
 container.addEventListener("mouseover", (event) => {
   let target = event.target;
-  target.style.background = "red";
+  target.style.background = "#ff00009e";
 });
 button.addEventListener("click", (event) => {
   let userInput = prompt("enter grid size. max: 100");
